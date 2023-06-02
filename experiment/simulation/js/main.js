@@ -40,8 +40,8 @@ function BEFS() {
     c = e;
     visited.push(e);
     if (e == EndVect) {
-		step_text += "<b>Found Goal!</b><br/><br/>"
 		ALG_STOP();
+		document.getElementById('question').innerHTML = "Found Goal!";
 		return;
 	}
     started=true;

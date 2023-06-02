@@ -1,4 +1,4 @@
-const nodeR = 12.5;
+const nodeR = 33;
 const edgeD = 2;
 const INF = 1E9;
 
@@ -279,6 +279,7 @@ function drawField() {
                 ctx.fillStyle = 'yellow';
             }
             ctx.beginPath();
+            //ctx.ellipse(nodes[i][0], nodes[i][1], nodeR * (1 + (i == last))+ nodeR, nodeR * (1 + (i == last)), 0, 0, Math.PI * 2);
             ctx.arc(nodes[i][0], nodes[i][1], nodeR * (1 + (i == last)), 0, Math.PI * 2);
             ctx.fill();
             ctx.fillStyle = '#616161';
@@ -288,7 +289,25 @@ function drawField() {
                     break;
                 }
             }
-            ctx.fillText(i,nodes[i][0] - nodeR/3 - (nodeR/3*(i >= 10)), nodes[i][1] + nodeR/1.4);
+
+			if(started) {
+				var diste = Math.sqrt((nodes[i][0] - nodes[EndVect][0])**2 + (nodes[i][1] - nodes[EndVect][1])**2).toFixed(0);
+				if (diste != 0) {
+					ctx.font  = 'bold 16px sans-serif';
+					ctx.fillText(i                   , nodes[i][0] - nodeR/5 - (nodeR/3*(i >= 10)), nodes[i][1] + nodeR/3 - ctx.measureText("M").width * 1.2*0.5);
+					ctx.font  = '16px sans-serif';
+					ctx.fillText("E=" + String(diste), nodes[i][0] - nodeR/5 - (nodeR/3*(i >= 10)) - 0.5*nodeR - 2.5, nodes[i][1] + nodeR/3 + ctx.measureText("M").width * 1.2*0.5);
+				} else {
+					ctx.font  = 'bold 16px sans-serif';
+					ctx.fillText(i                   , nodes[i][0] - nodeR/5 - (nodeR/3*(i >= 10)), nodes[i][1] + nodeR/3 - ctx.measureText("M").width * 1.2*0.5);
+					ctx.font  = '16px sans-serif';
+					ctx.fillText("E=" + String(diste), nodes[i][0] - nodeR/5 - (nodeR/3*(i >= 10)) - 0.25*nodeR - 2.5, nodes[i][1] + nodeR/3 + ctx.measureText("M").width * 1.2*0.5);
+				}
+            } else {
+				ctx.font = "bold 24pt sans-serif";
+				ctx.fillText(i                   , nodes[i][0] - 0.3*nodeR - (nodeR/3*(i >= 10)), nodes[i][1] + nodeR/2);
+				ctx.font  = '16px sans-serif';
+			}
 
             if (i == c) {
                 ctx.strokeStyle = 'black';
@@ -298,7 +317,7 @@ function drawField() {
                 ctx.lineWidth = edgeD;                    
             }
             ctx.beginPath();
-            ctx.arc(nodes[i][0], nodes[i][1], nodeR * 2, 0, Math.PI * 2);
+            ctx.arc(nodes[i][0], nodes[i][1], nodeR * 3/2, 0, Math.PI * 2);
             ctx.stroke();
         }
     }

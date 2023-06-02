@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
     </head>
 
-    <body onload="isWeigted = true" style="padding-left: 150px;padding-right: 150px;padding-top: 20px;">
+    <body onload="isWeigted = true; NoQuestion = false" style="padding-left: 150px;padding-right: 150px;padding-top: 20px;">
         <div class="container">
             <div class="columns is-centered">
                 <div class="column is-one-quarter v-instruction-title">
@@ -58,7 +58,7 @@
                         </div>
                         <div style="margin:5px 0px">
                             <button id="startbutn" class="button" onclick="vclear(); SN = Number(document.getElementById('svi').value); EndVect = document.getElementById('evi').value; visit.push(SN); parent[visit[0]] = undefined; BEFS();">Start BEFS</button>
-                            <button id="nuxt" class="button" onclick="BEFS();">Next</button>
+                            <button id="nuxt" class="button" onclick="if(started) BEFS();">Next</button>
                         </div>
                         <div style="margin:5px 0px">
                             <input id="auto" type=checkbox>&nbsp;&nbsp;AutoPlay</button>
@@ -98,6 +98,9 @@
                         </div>
                         <div style="margin:5px 0px">
                             <label><span style="background-color:orange;">&nbsp;&nbsp;</span>&nbsp;Frontier:&nbsp;</label><span id="visit_array"></span>
+                        </div>
+                        <div style="margin:5px 0px">
+                            <label><span style="#background-color:orange;">&nbsp;&nbsp;</span>&nbsp;Estimated Cost(E):&nbsp;</label><span id="weigth_array"></span>
                         </div>
                         <div style="margin:5px 0px">
                             <label><span style="#background-color:cyan;">&nbsp;&nbsp;</span>&nbsp;Visiting:&nbsp;</label><span id="visit_node"></span>

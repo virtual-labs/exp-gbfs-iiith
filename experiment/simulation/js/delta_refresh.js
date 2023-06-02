@@ -40,6 +40,13 @@ function refresh() {
 	document.getElementById('goal_node').innerHTML = (EndVect == null) ? "undefined" : String(EndVect);
 
 	document.getElementById('visit_array').innerHTML = '[' + String(visit.slice()) + ']';
+	document.getElementById('weigth_array').innerHTML = '[';
+	for (i = 0; i < weight.length; i++) {
+		document.getElementById('weigth_array').innerHTML += String(Number(weight[i].toFixed(0)));
+		if (i + 1 < visit.length) document.getElementById('weigth_array').innerHTML += ", ";
+	}
+	document.getElementById('weigth_array').innerHTML += ']';
+	
     document.getElementById('visit_node').innerHTML = String(e);
     document.getElementById('visiting_node').innerHTML = String(visit[0]);
     // document.getElementById('visited_array').innerHTML = '[' + String(visited.slice(0, visited.length-1)) + ']';

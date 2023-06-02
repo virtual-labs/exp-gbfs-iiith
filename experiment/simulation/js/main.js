@@ -11,7 +11,10 @@ var nuxtdis = false;
 var refreshIntervalId = null;
 
 var EndVect = null;
-var isObservation = false;
+var isObservation = true;
+
+var path_costs = [];
+var step_text = "";
 
 function ALG_STOP() {
     console.log("ALG_STOP");
@@ -24,27 +27,25 @@ function ALG_STOP() {
     clearInterval(refreshIntervalId);
 }
 
+
+document.getElementById('question').innerHTML = "";
 function BEFS() {
+	step_text = "";
 	if (isQuestion) { return; }
+	isObservation = true;
     e = visit.shift();
     weight.shift();
+    path_costs.shift();
     trav_circle(c, e);
     c = e;
     visited.push(e);
     if (e == EndVect) {
-		isObservation = true;
-		document.getElementById('question').innerHTML = "Found Goal!";
+		step_text += "<b>Found Goal!</b><br/><br/>"
 		ALG_STOP();
-		return;
-	}
-	if (visit.length == 0 && started) {
-		ALG_STOP();
-		isObservation = true;
-		document.getElementById('question').innerHTML = "Didn't Find Goal";
 		return;
 	}
     started=true;
-	if (!NoQuestion) { // chance = 2/10
+	if (!NoQuestion) { // chance = 1/2
 		var rand = Math.random();
 		console.log(rand);
 		if (rand < chance) {
@@ -52,13 +53,41 @@ function BEFS() {
 			question();
 		}
 	}
+
     for (const next of edges[e].slice()) {
         if (!visited.includes(next) && !visit.includes(next) && exist[next]) {
 			visit.push(next);
-            var dist = Math.sqrt((nodes[e][0] - nodes[EndVect][0])**2 + (nodes[e][1] - nodes[EndVect][1])**2);
+            var dist = Math.sqrt((nodes[next][0] - nodes[EndVect][0])**2 + (nodes[next][1] - nodes[EndVect][1])**2);
 			weight.push(dist);
+			path_costs.push(edges_weight[e][edges[e].slice().indexOf(next)]);
+			// console.log(dist, next, EndVect);
         }
     }
+
+	step_text += "<b>Currently visitable nodes: </b><br/>";
+	for (i = 0; i < visit.length; i++) {
+		step_text += String(visit[i]);
+		if (i + 1 < visit.length) step_text += ", ";
+	}
+
+	step_text += "<br/><br/><b>Path Cost g(n):</b> <br/>";
+	for (i = 0; i < path_costs.length; i++) {
+		console.log(path_costs);
+		step_text += String(Number(path_costs[i].toFixed(0)));
+		if (i + 1 < visit.length) step_text += ", ";
+	}
+
+	step_text += "<br/><b>Estimated Cost h(n):</b> <br/>";
+	for (i = 0; i < weight.length; i++) {
+		step_text += String(Number(weight[i].toFixed(0)));
+		if (i + 1 < visit.length) step_text += ", ";
+	}
+
+	step_text += "<br/><b>Total Cost h(n):</b> <br/>";
+	for (i = 0; i < weight.length; i++) {
+		step_text += String(Number(weight[i].toFixed(0)));
+		if (i + 1 < visit.length) step_text += ", ";
+	}
 
     for (let i = 0; i < weight.length; i++) {
         for (let j = 0; j < weight.length - i - 1; j++) {	
@@ -66,7 +95,14 @@ function BEFS() {
                 [visit[j + 1], visit[j]] = [visit[j], visit[j + 1]];
 				//console.log("nobutwhybutafterinbefs: ", visit);
                 [weight[j + 1], weight[j]] = [weight[j], weight[j + 1]];
+                [path_costs[j + 1], path_costs[j]] = [path_costs[j], path_costs[j + 1]];
             }
         }
     }
+
+	step_text += "<br/><br/><b>Hence Cheapest Node: </b>";
+	step_text += String(visit[0]);
+
+	//console.log(step_text);
+	document.getElementById('question').innerHTML = step_text;
 }

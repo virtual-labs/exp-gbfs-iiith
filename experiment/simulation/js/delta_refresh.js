@@ -3,8 +3,10 @@ function valid_input(l, inp) {
         return;
     } else if(inp.value > Number(inp.max) || inp.value < Number(inp.min) || parseFloat(inp.value) % 1 != 0 || !exist[Number(inp.value)]) {
         l.style.color = "red";
+        return false;
     } else {
         l.style.color = "";
+        return true;
     }
 }
 
@@ -19,9 +21,14 @@ function refresh() {
     }
     drawField();
 
-    var inp = document.getElementById("svi");
-    inp.max = exist.length-1;
-    valid_input(document.getElementById("sv"), inp);
+	//console.log(n);
+
+    var sinp = document.getElementById("svi");
+    var einp = document.getElementById("evi");
+    sinp.max = exist.length-1;
+    einp.max = exist.length-1;
+    document.getElementById("startbutn").disabled = !valid_input(document.getElementById("sv"), sinp);
+    document.getElementById("startbutn").disabled = !valid_input(document.getElementById("ev"), einp);
     //valid_input(document.getElementById("bf"), document.getElementById("bfi"));
     valid_input(document.getElementById("td"), document.getElementById("tdi"));
     

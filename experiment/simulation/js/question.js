@@ -11,6 +11,7 @@ var QnA = [
 
 function question() {
 	// alert("Question!");
+	isObservation = false;
 	selected = QnA[Math.floor(Math.random() * QnA.length)];
 	document.getElementById('question').innerHTML = selected[0];
 }

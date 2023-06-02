@@ -36,9 +36,11 @@ canv.addEventListener('contextmenu', function(e) {
     if (v != -1) {
         vclear();
         exist[v] = false;
+        n--;
     }
 });
 
+var gencost;
 canv.addEventListener('click', function(e) {
     //console.log("click");
     if (cur != -1) {
@@ -51,11 +53,15 @@ canv.addEventListener('click', function(e) {
     if (v == -1) {
         nodes.push([x, y]);
         edges.push([]);
+		edges_weight.push([]);
         exist.push(true);
         if (exist[last] && last != -1) {
             if (edges[last].indexOf(n - 1))
             edges[last].push(n - 1);
             edges[n - 1].push(last);
+			gencost = Math.floor(Math.random() * (20 - 1 + 1) + 1);
+			edges_weight[last].push(gencost);
+			edges_weight[n - 1].push(gencost);
             last = -1;
         }
 		n++;
@@ -66,9 +72,14 @@ canv.addEventListener('click', function(e) {
             if (edges[last].indexOf(v) == -1) {
                 edges[last].push(v);
                 edges[v].push(last);
+				gencost = Math.floor(Math.random() * (20 - 1 + 1) + 1);
+                edges_weight[last].push(gencost);
+                edges_weight[v].push(gencost);
             } else {
                 edges[last].splice(edges[last].indexOf(v), 1);
                 edges[v].splice(edges[v].indexOf(last), 1);
+                edges_weight[last].splice(edges[last].indexOf(v), 1);
+                edges_weight[v].splice(edges[v].indexOf(last), 1);
             }
             last = -1;
         }
@@ -147,6 +158,8 @@ function vclear() {
     noEdges = false;
     oneshotAuto = true;
     console.log("clear");
+	path_costs = [];
+	step_text = "";
 }
 
 function cclear() {

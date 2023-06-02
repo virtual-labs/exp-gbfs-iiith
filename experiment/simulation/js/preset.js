@@ -34,5 +34,5 @@ function preset() {
         exist.push(true);
         parent.push(null);
     }
-    edges_weight = [[5,2], [1,3,4], [2,5,6], [3], [4], [5], [6]];
+    edges_weight = [[5,2], [5,3,4], [2,5,6], [3], [4], [5], [6]];
 } preset();

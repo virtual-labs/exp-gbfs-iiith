@@ -57,7 +57,7 @@
                             <label id="ev">Goal Vertex: </label><input id="evi" type="number" value=0 min=0 style="width:50px;" onchange="vclear();"/>
                         </div>
                         <div style="margin:5px 0px">
-                            <button class="button" onclick="vclear(); SN = Number(document.getElementById('svi').value); EndVect = document.getElementById('evi').value; visit.push(SN); parent[visit[0]] = undefined; BEFS();">Start BEFS</button>
+                            <button id="startbutn" class="button" onclick="vclear(); SN = Number(document.getElementById('svi').value); EndVect = document.getElementById('evi').value; visit.push(SN); parent[visit[0]] = undefined; BEFS();">Start BEFS</button>
                             <button id="nuxt" class="button" onclick="BEFS();">Next</button>
                         </div>
                         <div style="margin:5px 0px">

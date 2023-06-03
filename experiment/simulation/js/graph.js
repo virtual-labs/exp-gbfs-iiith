@@ -160,6 +160,8 @@ function vclear() {
     console.log("clear");
 	path_costs = [];
 	step_text = "";
+	if(refreshIntervalId != null) clearInterval(refreshIntervalId);
+	refreshIntervalId = null;
 }
 
 function cclear() {
@@ -294,14 +296,14 @@ function drawField() {
 				var diste = Math.sqrt((nodes[i][0] - nodes[EndVect][0])**2 + (nodes[i][1] - nodes[EndVect][1])**2).toFixed(0);
 				if (diste != 0) {
 					ctx.font  = 'bold 16px sans-serif';
-					ctx.fillText(i                   , nodes[i][0] - nodeR/5 - (nodeR/3*(i >= 10)), nodes[i][1] + nodeR/3 - ctx.measureText("M").width * 1.2*0.5);
+					ctx.fillText(i                   , nodes[i][0] - nodeR/5 - (nodeR/12*(i >= 10)), nodes[i][1] + nodeR/3 - ctx.measureText("M").width * 1.2*0.5);
 					ctx.font  = '16px sans-serif';
-					ctx.fillText("E=" + String(diste), nodes[i][0] - nodeR/5 - (nodeR/3*(i >= 10)) - 0.5*nodeR - 2.5, nodes[i][1] + nodeR/3 + ctx.measureText("M").width * 1.2*0.5);
+					ctx.fillText("E=" + String(diste), nodes[i][0] - nodeR/5 - (nodeR/13*(i >= 10)) - 0.5*nodeR - 2.5, nodes[i][1] + nodeR/3 + ctx.measureText("M").width * 1.2*0.5);
 				} else {
 					ctx.font  = 'bold 16px sans-serif';
-					ctx.fillText(i                   , nodes[i][0] - nodeR/5 - (nodeR/3*(i >= 10)), nodes[i][1] + nodeR/3 - ctx.measureText("M").width * 1.2*0.5);
+					ctx.fillText(i                   , nodes[i][0] - nodeR/5 - (nodeR/12*(i >= 10)), nodes[i][1] + nodeR/3 - ctx.measureText("M").width * 1.2*0.5);
 					ctx.font  = '16px sans-serif';
-					ctx.fillText("E=" + String(diste), nodes[i][0] - nodeR/5 - (nodeR/3*(i >= 10)) - 0.25*nodeR - 2.5, nodes[i][1] + nodeR/3 + ctx.measureText("M").width * 1.2*0.5);
+					ctx.fillText("E=" + String(diste), nodes[i][0] - nodeR/5 - (nodeR/14*(i >= 10)) - 0.25*nodeR - 2.5, nodes[i][1] + nodeR/3 + ctx.measureText("M").width * 1.2*0.5);
 				}
             } else {
 				ctx.font = "bold 24pt sans-serif";

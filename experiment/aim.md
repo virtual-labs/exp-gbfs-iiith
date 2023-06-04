@@ -1,1 +1,1 @@
-### Aim of the experiment
+To understand how the Best First Search Algorithm Works

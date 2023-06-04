@@ -1,1 +1,1 @@
-## Experiment name
+## Greedy Best First Search

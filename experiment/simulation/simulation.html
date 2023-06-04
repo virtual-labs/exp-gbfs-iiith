@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" onload="var isInstru = false;">
+<html lang="en">
 
     <head>
         <meta charset="UTF-8">
@@ -8,9 +8,13 @@
 
         <title id="title"></title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+	    <script type="text/javascript">
+		  var isInstru = false;
+	    </script>
     </head>
 
-    <body onload="isWeigted = true; NoQuestion = true" style="padding-left: 150px;padding-right: 150px;padding-top: 20px;">
+    <body onload="isWeigted = true; NoQuestion = true;" style="padding-left: 150px;padding-right: 150px;padding-top: 20px;">
         <div class="container">
             <div class="columns is-centered">
                 <div class="column is-one-quarter v-instruction-title">
@@ -30,7 +34,7 @@
             </div>
         </div>
 
-        <div class="columns is-centered" onclick="isInstru = !isInstru; if (isInstru) {document.getElementById('instruction-title').classList.add('v-collapsible-active'); document.getElementById('instructions').style.setProperty('max-height', '1020px', '');} else {document.getElementById('instruction-title').classList.remove('v-collapsible-active'); document.getElementById('instructions').style.removeProperty('max-height');}">
+        <div class="columns is-centered" onload="var isInstru = false;" onclick="isInstru = !isInstru; if (isInstru) {document.getElementById('instruction-title').classList.add('v-collapsible-active'); document.getElementById('instructions').style.setProperty('max-height', '1020px', '');} else {document.getElementById('instruction-title').classList.remove('v-collapsible-active'); document.getElementById('instructions').style.removeProperty('max-height');}">
             <div class="column">
                 <div class="v-collapsible-instruction-container v-instruction-container">
                     <div id="instruction-title" class="v-collapsible is-size-5">Instructions</div>

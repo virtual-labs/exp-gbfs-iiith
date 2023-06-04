@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onload="var isInstru = false;">
 
     <head>
         <meta charset="UTF-8">
@@ -30,16 +30,24 @@
             </div>
         </div>
 
-        <div class="columns is-centered">
+        <div class="columns is-centered" onclick="isInstru = !isInstru; if (isInstru) {document.getElementById('instruction-title').classList.add('v-collapsible-active'); document.getElementById('instructions').style.setProperty('max-height', '1020px', '');} else {document.getElementById('instruction-title').classList.remove('v-collapsible-active'); document.getElementById('instructions').style.removeProperty('max-height');}">
             <div class="column">
                 <div class="v-collapsible-instruction-container v-instruction-container">
                     <div id="instruction-title" class="v-collapsible is-size-5">Instructions</div>
-                    <div class="v-content" style="text-align: left; padding-left: 5%; padding-right: 5%;">
+                    <div id="instructions" class="v-content" style="text-align: left; padding-left: 5%; padding-right: 5%;">
                         <ul id="instruc" style="list-style: disc;">
-							<li>Help</li>
-							<li>Help</li>
-							<li>Help</li>
-							<li>Help</li>
+							<li>Start The Algorithm by clicking on the `Start DFS` button after selecting the `Start Vertex` from any of the existing nodes</li>
+							<li>Cycle through the steps of the algorithm by clicking the `Next` button</li>
+							<li>Enabling `Autoplay` cycles though the algoritm automatically</li>
+							<li>`Toggle Forces` makes nodes dynamic (Purely Aesthetic)</li>
+							<li>`Clear` removes the Whole Graph</li>
+							<li>`Clear Visited` clears the status of all nodes</li>
+							<li>`Tree Depth` clears the graph, and draws a tree with depth of given input</li>
+							<li>Clicking on the graph creates a node</li>
+							<li>You may drag a node to move it</li>
+							<li>Clicking on a node selects, and clicking on a node after creates a edge between those 2 nodes</li>
+							<li>Clicking on a node selects, and clicking on a adjecent node after removes the edge between those 2 nodes</li>
+							<li>Green is Unvisited<br/>Orange is The Frontier<br/>Black is Visited</li>
                         </ul>
                     </div>
                 </div>

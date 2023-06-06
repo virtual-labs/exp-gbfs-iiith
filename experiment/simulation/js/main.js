@@ -59,7 +59,7 @@ function BEFS() {
 			visit.push(next);
             var dist = Math.sqrt((nodes[next][0] - nodes[EndVect][0])**2 + (nodes[next][1] - nodes[EndVect][1])**2);
 			weight.push(dist);
-			path_costs.push(edges_weight[e][edges[e].slice().indexOf(next)]);
+			path_costs.push(edges_weight[e][edges[e].indexOf(next)]);
 			// console.log(dist, next, EndVect);
         }
     }

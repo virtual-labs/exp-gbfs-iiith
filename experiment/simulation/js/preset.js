@@ -22,11 +22,11 @@ function preset() {
                 //edges_weight.push([default_weight, default_weight]);
             } else if (nodes.length-1 >= Math.pow(2, trd-1) - 1) {
                 edges.push([Math.floor((nodes.length-2)/2)]);
-                edges_weight.push([edges[Math.floor(edges_weight.length/2)]]);
+                edges_weight.push([edges_weight[Math.floor((nodes.length-2)/2)][(nodes.length)%2]]);
                 //edges_weight.push([default_weight]);
             } else {
                 edges.push([Math.floor((nodes.length-2)/2), ((2*nodes.length)-1), (2*nodes.length)]);
-                edges_weight.push([edges[Math.floor(edges_weight.length/2)], Math.floor(Math.random() * (20 - 1 + 1) + 1), Math.floor(Math.random() * (20 - 1 + 1) + 1)]);
+                edges_weight.push([edges_weight[Math.floor((nodes.length-2)/2)][(nodes.length)%2], Math.floor(Math.random() * (20 - 1 + 1) + 1), Math.floor(Math.random() * (20 - 1 + 1) + 1)]);
                 //edges_weight.push([default_weight, default_weight, default_weight]);
             }
         }

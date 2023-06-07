@@ -36,7 +36,7 @@ canv.addEventListener('contextmenu', function(e) {
     if (v != -1) {
         vclear();
         exist[v] = false;
-        n--;
+        //n--;
     }
 });
 
@@ -256,6 +256,7 @@ function drawField() {
         }
     }
     for (var i = 0; i < n; ++i) {
+		//console.log(n == nodes.length, "n: ", n, "nodes: ", nodes.length);
         if (exist[i]) {
             ctx.fillStyle = '#97d23d';
             for (var k = 0; k < visited.length; k++) {

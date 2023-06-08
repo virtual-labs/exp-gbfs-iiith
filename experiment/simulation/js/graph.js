@@ -36,7 +36,7 @@ canv.addEventListener('contextmenu', function(e) {
     if (v != -1) {
         vclear();
         exist[v] = false;
-        n--;
+        //n--;
     }
 });
 
@@ -55,8 +55,7 @@ canv.addEventListener('click', function(e) {
         edges.push([]);
 		edges_weight.push([]);
         exist.push(true);
-        if (exist[last] && last != -1) {
-            if (edges[last].indexOf(n - 1))
+        if (exist[last] && last != -1 && n-1 != last) {
             edges[last].push(n - 1);
             edges[n - 1].push(last);
 			gencost = Math.floor(Math.random() * (20 - 1 + 1) + 1);
@@ -69,6 +68,10 @@ canv.addEventListener('click', function(e) {
         if (!exist[last] || last == -1) {
             last = v;
         } else {
+			if (v == last) {
+				last = -1;
+				return;
+			}
             if (edges[last].indexOf(v) == -1) {
                 edges[last].push(v);
                 edges[v].push(last);
@@ -78,8 +81,8 @@ canv.addEventListener('click', function(e) {
             } else {
                 edges[last].splice(edges[last].indexOf(v), 1);
                 edges[v].splice(edges[v].indexOf(last), 1);
-                edges_weight[last].splice(edges[last].indexOf(v), 1);
-                edges_weight[v].splice(edges[v].indexOf(last), 1);
+                edges_weight[last].splice(edges_weight[last].indexOf(v), 1);
+                edges_weight[v].splice(edges_weight[v].indexOf(last), 1);
             }
             last = -1;
         }
@@ -253,6 +256,7 @@ function drawField() {
         }
     }
     for (var i = 0; i < n; ++i) {
+		//console.log(n == nodes.length, "n: ", n, "nodes: ", nodes.length);
         if (exist[i]) {
             ctx.fillStyle = '#97d23d';
             for (var k = 0; k < visited.length; k++) {

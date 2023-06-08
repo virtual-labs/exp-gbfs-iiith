@@ -33,6 +33,29 @@ function BEFS() {
 	step_text = "";
 	if (isQuestion) { return; }
 	isObservation = true;
+	if (started, visit.length == 0) {
+		ALG_STOP();
+		if (e != EndVect) {
+			document.getElementById('question').innerHTML = "Not Found Goal!";
+		}
+		return;
+	}
+	/*
+    if (noEdges) {
+        visited.push(e);
+        trav_circle(e, parent[e]);
+        c = parent[e];
+        e = parent[e];
+        for (const next of edges[e].slice()) {
+            if (!visited.includes(next) && exist[next] && parent[next] == e) {
+                noEdges = false;
+                console.log(next);
+            }
+        }
+        console.log('end: ', e);
+        return;
+    }
+	*/
     e = visit.shift();
     weight.shift();
     path_costs.shift();
@@ -54,12 +77,15 @@ function BEFS() {
 		}
 	}
 
+    //noEdges = true;  
     for (const next of edges[e].slice()) {
         if (!visited.includes(next) && !visit.includes(next) && exist[next]) {
+            //noEdges = false;  
 			visit.push(next);
+            //parent[next] = e;
             var dist = Math.sqrt((nodes[next][0] - nodes[EndVect][0])**2 + (nodes[next][1] - nodes[EndVect][1])**2);
 			weight.push(dist);
-			path_costs.push(edges_weight[e][edges[e].slice().indexOf(next)]);
+			path_costs.push(edges_weight[e][edges[e].indexOf(next)]);
 			// console.log(dist, next, EndVect);
         }
     }

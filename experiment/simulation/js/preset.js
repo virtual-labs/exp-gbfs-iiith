@@ -3,6 +3,9 @@ var cheight = canv.offsetHeight;
 
 var default_weight = 1;
 
+var min = 100;
+var max = 300;
+
 console.log(cwidth, cheight);
 
 function preset() {
@@ -17,7 +20,7 @@ function preset() {
             nodes.push([(j/Math.pow(2, i))*cwidth, (i/(trd+1))*cheight]);
             if (nodes.length-1 == 0) {
                 edges.push([((2*nodes.length)-1), (2*nodes.length)]);
-                edges_weight.push([Math.floor(Math.random() * (20 - 1 + 1) + 1), Math.floor(Math.random() * (20 - 1 + 1) + 1)]);
+                edges_weight.push([Math.floor(Math.random() * (max - min + 1) + min), Math.floor(Math.random() * (max - min + 1) + min)]);
                 //edges_weight.push([default_weight, default_weight]);
             } else if (nodes.length-1 >= Math.pow(2, trd-1) - 1) {
                 edges.push([Math.floor((nodes.length-2)/2)]);
@@ -25,7 +28,7 @@ function preset() {
                 //edges_weight.push([default_weight]);
             } else {
                 edges.push([Math.floor((nodes.length-2)/2), ((2*nodes.length)-1), (2*nodes.length)]);
-                edges_weight.push([edges_weight[Math.floor((nodes.length-2)/2)][(nodes.length)%2], Math.floor(Math.random() * (20 - 1 + 1) + 1), Math.floor(Math.random() * (20 - 1 + 1) + 1)]);
+                edges_weight.push([edges_weight[Math.floor((nodes.length-2)/2)][(nodes.length)%2], Math.floor(Math.random() * (max - min + 1) + min), Math.floor(Math.random() * (max - min + 1) + min)]);
                 //edges_weight.push([default_weight, default_weight, default_weight]);
             }
         }

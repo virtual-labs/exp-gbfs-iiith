@@ -58,7 +58,7 @@ canv.addEventListener('click', function(e) {
         if (exist[last] && last != -1 && n-1 != last) {
             edges[last].push(n - 1);
             edges[n - 1].push(last);
-			gencost = Math.floor(Math.random() * (20 - 1 + 1) + 1);
+			gencost = Math.floor(Math.random() * (max - min + 1) + min);
 			edges_weight[last].push(gencost);
 			edges_weight[n - 1].push(gencost);
             last = -1;

@@ -60,7 +60,7 @@
 
         <div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start">
 
-            <div class="column is-2-desktop is-12-tablet is-12-mobile">
+            <div id="control_container" class="column is-2-desktop is-12-tablet is-12-mobile">
                 <div class="v-datalist-container">
                     <div class="v-datalist-title">Controls</div>
                     <div id="controlls" class="v-datalist-row">
@@ -85,7 +85,7 @@
                             <div>
                                 <label style="font-weight: bold; font-size:12px;">Note: Overwrites Graph</label>
                             </div>
-                            <label>  <u>Tree Controlls:</u> </label>
+                            <label>  <u>Tree Controls:</u> </label>
                             <!--div>
                                 <label>&nbsp;&nbsp;| </label><label id="bf">Branching Factor: </label><input id="bfi" type="number" value=2 min=0 max=3 style="width:50px;" onclick="preset();"/>
                             </div-->
@@ -97,11 +97,11 @@
                 </div>
             </div>
 
-            <div class="column is-8-desktop is-12-tablet is-12-mobile">
+            <div id="canvas_container" class="column is-8-desktop is-12-tablet is-12-mobile">
                 <canvas id="canvas" style="width:100%;" height="500" oncontextmenu="return false;"></canvas>
             </div>
 
-            <div class="column is-2-desktop is-12-tablet is-12-mobile">
+            <div id="info_container" class="column is-2-desktop is-12-tablet is-12-mobile">
                 <div class="v-datalist-container" style="padding-left: 5px;">
                     <div class="v-datalist-title">Information</div>
                     <div id="info" class="v-datalist-row" style="text-align:left;">

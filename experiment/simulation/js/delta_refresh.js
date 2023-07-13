@@ -13,8 +13,11 @@ function valid_input(l, inp) {
 var oneshotAuto = true;
 
 function refresh() {
-    canv.width = canv.offsetWidth;
-    canv.height = canv.offsetHeight;
+	if (canv.width != canv.offsetWidth || canv.height != canv.offsetHeight) {
+		canv.width = canv.offsetWidth;
+		canv.height = canv.offsetHeight;
+		preset();
+	}
 
     if (type) {
         force();
@@ -83,6 +86,25 @@ function refresh() {
 		document.getElementById('qoro').innerHTML = "Question";
 		document.getElementById('submitform').style.display = "";
 	}
+
+	const mq = window.matchMedia( "(max-width: 1282px)" );
+
+	if (mq.matches) {
+		document.getElementById('control_container').classList.add('is-3-desktop');
+		document.getElementById('control_container').classList.remove('is-2-desktop');
+		document.getElementById('canvas_container').classList.add('is-6-desktop');
+		document.getElementById('canvas_container').classList.remove('is-8-desktop');
+		document.getElementById('info_container').classList.add('is-3-desktop');
+		document.getElementById('info_container').classList.remove('is-2-desktop');
+	} else {
+		document.getElementById('control_container').classList.remove('is-3-desktop');
+		document.getElementById('control_container').classList.add('is-2-desktop');
+		document.getElementById('canvas_container').classList.remove('is-6-desktop');
+		document.getElementById('canvas_container').classList.add('is-8-desktop');
+		document.getElementById('info_container').classList.remove('is-3-desktop');
+		document.getElementById('info_container').classList.add('is-2-desktop');
+	}
+
 }
 
 setInterval(refresh, 30);

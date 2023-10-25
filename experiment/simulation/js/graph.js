@@ -1,4 +1,4 @@
-const nodeR = 33;
+const nodeR = 25;
 const edgeD = 2;
 const INF = 1E9;
 

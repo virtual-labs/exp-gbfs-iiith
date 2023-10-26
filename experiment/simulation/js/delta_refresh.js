@@ -32,13 +32,24 @@ function refresh() {
     einp.max = exist.length-1;
     document.getElementById("startbutn").disabled = !valid_input(document.getElementById("sv"), sinp);
     document.getElementById("startbutn").disabled = !valid_input(document.getElementById("ev"), einp);
+
+    if(document.getElementById("tdi").value == "") {
+        return;
+    } else if(document.getElementById("tdi").value > Number(document.getElementById("tdi").max) || document.getElementById("tdi").value < Number(document.getElementById("tdi").min) || parseFloat(document.getElementById("tdi").value) % 1 != 0 || !exist[Number(document.getElementById("tdi").value)]) {
+        document.getElementById("td").style.color = "red";
+        return false;
+    } else {
+        document.getElementById("td").style.color = "";
+        return true;
+    }
+
     //valid_input(document.getElementById("bf"), document.getElementById("bfi"));
-    valid_input(document.getElementById("td"), document.getElementById("tdi"));
+    //valid_input(document.getElementById("td"), document.getElementById("tdi"));
     
     //document.getElementById("bf").style.color = "gray";
-    document.getElementById("td").style.color = "gray";
+    //document.getElementById("td").style.color = "gray";
     //document.getElementById("bf").style.color = "";
-    document.getElementById("td").style.color = "";
+    //document.getElementById("td").style.color = "";
 
 	document.getElementById('goal_node').innerHTML = (EndVect == null) ? "undefined" : String(EndVect);
 

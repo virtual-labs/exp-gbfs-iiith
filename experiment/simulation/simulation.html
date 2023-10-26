@@ -90,7 +90,7 @@
                                 <label>&nbsp;&nbsp;| </label><label id="bf">Branching Factor: </label><input id="bfi" type="number" value=2 min=0 max=3 style="width:50px;" onclick="preset();"/>
                             </div-->
                             <div style="margin:5px 0px">
-                                <label>&nbsp;&nbsp;| </label><label id="td">Tree Depth: </label><input id="tdi" type="number" value=3 min=0 max=4 style="width:50px;" onclick="preset();"/>
+                                <label>&nbsp;&nbsp;| </label><label id="td">Tree Depth: </label><input id="tdi" type="number" value=3 min=0 max=3 style="width:50px;" onchange="if(document.getElementById('td').style.color != 'red') preset();"/>
                             </div>
                         </div>
                     </div>

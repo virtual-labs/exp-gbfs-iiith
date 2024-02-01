@@ -34,13 +34,11 @@ function refresh() {
     document.getElementById("startbutn").disabled = !valid_input(document.getElementById("ev"), einp);
 
     if(document.getElementById("tdi").value == "") {
-        return;
-    } else if(document.getElementById("tdi").value > Number(document.getElementById("tdi").max) || document.getElementById("tdi").value < Number(document.getElementById("tdi").min) || parseFloat(document.getElementById("tdi").value) % 1 != 0 || !exist[Number(document.getElementById("tdi").value)]) {
+        document.getElementById("td").style.color = "";
+    } else if(document.getElementById("tdi").value > Number(document.getElementById("tdi").max) || document.getElementById("tdi").value < Number(document.getElementById("tdi").min)) {
         document.getElementById("td").style.color = "red";
-        return false;
     } else {
         document.getElementById("td").style.color = "";
-        return true;
     }
 
     //valid_input(document.getElementById("bf"), document.getElementById("bfi"));
@@ -90,7 +88,7 @@ function refresh() {
 		document.getElementById('QuestionBox').style.display = "none";
 	}
 	
-	if (isObservation) {
+	if (isObservation || NoQuestion) {
 		document.getElementById('qoro').innerHTML = "Observation";
 		document.getElementById('submitform').style.display = "none";
 	} else {
@@ -115,6 +113,8 @@ function refresh() {
 		document.getElementById('info_container').classList.remove('is-3-desktop');
 		document.getElementById('info_container').classList.add('is-2-desktop');
 	}
+
+    //console.log(isObservation, isQuestion);
 
 }
 

@@ -1,0 +1,88 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What does the term 'best' refer to in Best First Search (BFS)?",
+      "answers": {
+        "a": "The best path found so far in the search space.",
+        "b": "The best heuristic function used for evaluation.",
+        "c": "The best node to expand based on the evaluation function.",
+        "d": "The best order of exploring nodes in the search space."
+      },
+      "explanations": {
+        "a": "",
+        "b": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which factor influences the efficiency of Best First Search (BFS)?",
+      "answers": {
+        "a": "The choice of the heuristic function",
+        "b": "The size of the search space",
+        "c": "The ordering of expanded nodes",
+        "d": "The initial state of the problem"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the time complexity of Best First Search (BFS) in the worst-case scenario?",
+      "answers": {
+        "a": "O(m^b)",
+        "b": "O(b^m)",
+        "c": "O(b+m)",
+        "d": "O(bm)"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following heuristic functions is admissible in Best-First Search?",
+      "answers": {
+        "a": "Overestimating the cost from the current node to the goal node",
+        "b": "Underestimating the cost from the current node to the goal node",
+        "c": "Always assigning a heuristic value of zero to all nodes",
+        "d": "Assigning a random heuristic value to each node"
+      },
+      "explanations": {
+        "a": "",
+        "b": "An admissible heuristic function never overestimates the cost to reach the goal",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which property does Best First Search (BFS) guarantee to find?",
+      "answers": {
+        "a": "Completeness",
+        "b": "Optimality",
+        "c": "Admissibility",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "As explained, BFS is neither optimal nor complete. The heuristic function is not guaranteed to be admissible, although it is preferred."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    }
+  ]
+}

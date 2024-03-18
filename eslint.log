@@ -1,0 +1,237 @@
+
+/home/runner/work/exp-gbfs-iiith/exp-gbfs-iiith/experiment/simulation/js/delta_refresh.js
+   4:112  warning  'exist' is not defined              no-undef
+  16:6    warning  'canv' is not defined               no-undef
+  16:20   warning  'canv' is not defined               no-undef
+  16:40   warning  'canv' is not defined               no-undef
+  16:55   warning  'canv' is not defined               no-undef
+  17:3    warning  'canv' is not defined               no-undef
+  17:16   warning  'canv' is not defined               no-undef
+  18:3    warning  'canv' is not defined               no-undef
+  18:17   warning  'canv' is not defined               no-undef
+  19:3    warning  'preset' is not defined             no-undef
+  22:9    warning  'type' is not defined               no-undef
+  23:9    warning  'force' is not defined              no-undef
+  25:5    warning  'drawField' is not defined          no-undef
+  31:16   warning  'exist' is not defined              no-undef
+  32:16   warning  'exist' is not defined              no-undef
+  52:52   warning  'EndVect' is not defined            no-undef
+  52:92   warning  'EndVect' is not defined            no-undef
+  54:66   warning  'visit' is not defined              no-undef
+  56:7    warning  'i' is not defined                  no-undef
+  56:14   warning  'i' is not defined                  no-undef
+  56:18   warning  'weight' is not defined             no-undef
+  56:33   warning  'i' is not defined                  no-undef
+  57:70   warning  'weight' is not defined             no-undef
+  57:77   warning  'i' is not defined                  no-undef
+  58:7    warning  'i' is not defined                  no-undef
+  58:15   warning  'visit' is not defined              no-undef
+  62:62   warning  'e' is not defined                  no-undef
+  63:65   warning  'visit' is not defined              no-undef
+  68:13   warning  'started' is not defined            no-undef
+  69:13   warning  'nuxtdis' is not defined            no-undef
+  73:17   warning  'refreshIntervalId' is not defined  no-undef
+  73:49   warning  'BEFS' is not defined               no-undef
+  73:60   warning  'input' is not defined              no-undef
+  78:16   warning  'refreshIntervalId' is not defined  no-undef
+  79:23   warning  'refreshIntervalId' is not defined  no-undef
+  80:9    warning  'nuxtdis' is not defined            no-undef
+  85:9    warning  'isQuestion' is not defined         no-undef
+  85:23   warning  'isObservation' is not defined      no-undef
+  91:6    warning  'isObservation' is not defined      no-undef
+  91:23   warning  'NoQuestion' is not defined         no-undef
+
+/home/runner/work/exp-gbfs-iiith/exp-gbfs-iiith/experiment/simulation/js/graph.js
+    6:11  warning  'canvas' is not defined                            no-undef
+    7:7   warning  'input' is assigned a value but never used         no-unused-vars
+   17:5   warning  'parent' is assigned a value but never used        no-unused-vars
+   21:5   warning  'visited_edge' is assigned a value but never used  no-unused-vars
+   26:5   warning  'SN' is assigned a value but never used            no-unused-vars
+   51:9   warning  'y' is not defined                                 no-undef
+   52:9   warning  'v' is not defined                                 no-undef
+   52:21  warning  'y' is not defined                                 no-undef
+   53:9   warning  'v' is not defined                                 no-undef
+   54:24  warning  'y' is not defined                                 no-undef
+   56:3   warning  'edges_weight' is not defined                      no-undef
+   61:42  warning  'max' is not defined                               no-undef
+   61:48  warning  'min' is not defined                               no-undef
+   61:59  warning  'min' is not defined                               no-undef
+   62:4   warning  'edges_weight' is not defined                      no-undef
+   63:4   warning  'edges_weight' is not defined                      no-undef
+   69:20  warning  'v' is not defined                                 no-undef
+   71:8   warning  'v' is not defined                                 no-undef
+   75:37  warning  'v' is not defined                                 no-undef
+   76:34  warning  'v' is not defined                                 no-undef
+   77:23  warning  'v' is not defined                                 no-undef
+   79:17  warning  'edges_weight' is not defined                      no-undef
+   80:17  warning  'edges_weight' is not defined                      no-undef
+   80:30  warning  'v' is not defined                                 no-undef
+   82:56  warning  'v' is not defined                                 no-undef
+   83:23  warning  'v' is not defined                                 no-undef
+   83:39  warning  'v' is not defined                                 no-undef
+   84:17  warning  'edges_weight' is not defined                      no-undef
+   84:43  warning  'edges_weight' is not defined                      no-undef
+   84:70  warning  'v' is not defined                                 no-undef
+   85:17  warning  'edges_weight' is not defined                      no-undef
+   85:30  warning  'v' is not defined                                 no-undef
+   85:40  warning  'edges_weight' is not defined                      no-undef
+   85:53  warning  'v' is not defined                                 no-undef
+  101:43  warning  'e' is defined but never used                      no-unused-vars
+  113:44  warning  'e' is defined but never used                      no-unused-vars
+  150:5   warning  'c' is not defined                                 no-undef
+  151:5   warning  'e' is not defined                                 no-undef
+  152:5   warning  'ep' is not defined                                no-undef
+  153:5   warning  'visit' is not defined                             no-undef
+  154:5   warning  'weight' is not defined                            no-undef
+  158:5   warning  'started' is not defined                           no-undef
+  159:5   warning  'isObservation' is not defined                     no-undef
+  160:5   warning  'EndVect' is not defined                           no-undef
+  161:5   warning  'noEdges' is not defined                           no-undef
+  162:5   warning  'oneshotAuto' is not defined                       no-undef
+  164:2   warning  'path_costs' is not defined                        no-undef
+  165:2   warning  'step_text' is not defined                         no-undef
+  166:5   warning  'refreshIntervalId' is not defined                 no-undef
+  166:46  warning  'refreshIntervalId' is not defined                 no-undef
+  167:2   warning  'refreshIntervalId' is not defined                 no-undef
+  174:5   warning  'edges_weight' is not defined                      no-undef
+  189:7   warning  'px' is already defined                            no-redeclare
+  190:7   warning  'py' is already defined                            no-redeclare
+  219:10  warning  'drawField' is defined but never used              no-unused-vars
+  252:31  warning  'edges_weight' is not defined                      no-undef
+  258:14  warning  'i' is already defined                             no-redeclare
+  268:22  warning  'k' is already defined                             no-redeclare
+  268:33  warning  'visit' is not defined                             no-undef
+  269:21  warning  'visit' is not defined                             no-undef
+  281:22  warning  'c' is not defined                                 no-undef
+  281:74  warning  'c' is not defined                                 no-undef
+  284:22  warning  'EndVect' is not defined                           no-undef
+  292:22  warning  'k' is already defined                             no-redeclare
+  293:45  warning  'c' is not defined                                 no-undef
+  299:7   warning  'started' is not defined                           no-undef
+  300:48  warning  'EndVect' is not defined                           no-undef
+  300:87  warning  'EndVect' is not defined                           no-undef
+  318:22  warning  'c' is not defined                                 no-undef
+  350:9   warning  'used' is not defined                              no-undef
+  352:9   warning  'used' is not defined                              no-undef
+  355:5   warning  'used' is not defined                              no-undef
+  362:30  warning  'used' is not defined                              no-undef
+  363:17  warning  'used' is not defined                              no-undef
+  385:10  warning  'force' is defined but never used                  no-unused-vars
+  397:14  warning  'i' is already defined                             no-redeclare
+  399:22  warning  'j' is already defined                             no-redeclare
+  413:14  warning  'i' is already defined                             no-redeclare
+  421:14  warning  'i' is already defined                             no-redeclare
+
+/home/runner/work/exp-gbfs-iiith/exp-gbfs-iiith/experiment/simulation/js/main.js
+    8:5   warning  'noEdges' is assigned a value but never used        no-unused-vars
+   10:5   warning  'nuxtdis' is assigned a value but never used        no-unused-vars
+   14:5   warning  'isObservation' is assigned a value but never used  no-unused-vars
+   32:10  warning  'BEFS' is defined but never used                    no-unused-vars
+   34:6   warning  'isQuestion' is not defined                         no-undef
+   62:5   warning  'trav_circle' is not defined                        no-undef
+   64:5   warning  'visited' is not defined                            no-undef
+   71:7   warning  'NoQuestion' is not defined                         no-undef
+   74:14  warning  'chance' is not defined                             no-undef
+   75:4   warning  'isQuestion' is not defined                         no-undef
+   76:4   warning  'question' is not defined                           no-undef
+   81:24  warning  'edges' is not defined                              no-undef
+   82:14  warning  'visited' is not defined                            no-undef
+   82:65  warning  'exist' is not defined                              no-undef
+   86:35  warning  'nodes' is not defined                              no-undef
+   86:52  warning  'nodes' is not defined                              no-undef
+   86:77  warning  'nodes' is not defined                              no-undef
+   86:94  warning  'nodes' is not defined                              no-undef
+   88:36  warning  'edges' is not defined                              no-undef
+   94:7   warning  'i' is not defined                                  no-undef
+   94:14  warning  'i' is not defined                                  no-undef
+   94:32  warning  'i' is not defined                                  no-undef
+   95:29  warning  'i' is not defined                                  no-undef
+   96:7   warning  'i' is not defined                                  no-undef
+  100:7   warning  'i' is not defined                                  no-undef
+  100:14  warning  'i' is not defined                                  no-undef
+  100:37  warning  'i' is not defined                                  no-undef
+  102:41  warning  'i' is not defined                                  no-undef
+  103:7   warning  'i' is not defined                                  no-undef
+  107:7   warning  'i' is not defined                                  no-undef
+  107:14  warning  'i' is not defined                                  no-undef
+  107:33  warning  'i' is not defined                                  no-undef
+  108:37  warning  'i' is not defined                                  no-undef
+  109:7   warning  'i' is not defined                                  no-undef
+  113:7   warning  'i' is not defined                                  no-undef
+  113:14  warning  'i' is not defined                                  no-undef
+  113:33  warning  'i' is not defined                                  no-undef
+  114:37  warning  'i' is not defined                                  no-undef
+  115:7   warning  'i' is not defined                                  no-undef
+
+/home/runner/work/exp-gbfs-iiith/exp-gbfs-iiith/experiment/simulation/js/mvcircle.js
+  25:5    warning  'ctx' is not defined                     no-undef
+  25:21   warning  'edgeD' is not defined                   no-undef
+  26:5    warning  'ctx' is not defined                     no-undef
+  27:5    warning  'ctx' is not defined                     no-undef
+  28:5    warning  'ctx' is not defined                     no-undef
+  28:135  warning  'nodeR' is not defined                   no-undef
+  29:5    warning  'ctx' is not defined                     no-undef
+  35:14   warning  'nuxtdis' is not defined                 no-undef
+  39:10   warning  'trav_circle' is defined but never used  no-unused-vars
+  45:12   warning  'nodes' is not defined                   no-undef
+  46:10   warning  'nodes' is not defined                   no-undef
+  47:12   warning  'nodes' is not defined                   no-undef
+  48:10   warning  'nodes' is not defined                   no-undef
+
+/home/runner/work/exp-gbfs-iiith/exp-gbfs-iiith/experiment/simulation/js/preset.js
+   1:14  warning  'canv' is not defined                                no-undef
+   2:15  warning  'canv' is not defined                                no-undef
+   4:5   warning  'default_weight' is assigned a value but never used  no-unused-vars
+  12:14  warning  'canv' is not defined                                no-undef
+  13:15  warning  'canv' is not defined                                no-undef
+  16:5   warning  'cclear' is not defined                              no-undef
+  17:5   warning  'type' is not defined                                no-undef
+  18:10  warning  'i' is not defined                                   no-undef
+  18:17  warning  'i' is not defined                                   no-undef
+  18:27  warning  'i' is not defined                                   no-undef
+  19:14  warning  'j' is not defined                                   no-undef
+  19:21  warning  'j' is not defined                                   no-undef
+  19:37  warning  'i' is not defined                                   no-undef
+  19:41  warning  'j' is not defined                                   no-undef
+  19:45  warning  'j' is not defined                                   no-undef
+  20:13  warning  'nodes' is not defined                               no-undef
+  20:26  warning  'j' is not defined                                   no-undef
+  20:40  warning  'i' is not defined                                   no-undef
+  20:53  warning  'i' is not defined                                   no-undef
+  21:17  warning  'nodes' is not defined                               no-undef
+  22:17  warning  'edges' is not defined                               no-undef
+  22:33  warning  'nodes' is not defined                               no-undef
+  22:54  warning  'nodes' is not defined                               no-undef
+  23:17  warning  'edges_weight' is not defined                        no-undef
+  25:24  warning  'nodes' is not defined                               no-undef
+  26:17  warning  'edges' is not defined                               no-undef
+  26:41  warning  'nodes' is not defined                               no-undef
+  27:17  warning  'edges_weight' is not defined                        no-undef
+  27:36  warning  'edges_weight' is not defined                        no-undef
+  27:61  warning  'nodes' is not defined                               no-undef
+  27:82  warning  'nodes' is not defined                               no-undef
+  30:17  warning  'edges' is not defined                               no-undef
+  30:41  warning  'nodes' is not defined                               no-undef
+  30:65  warning  'nodes' is not defined                               no-undef
+  30:86  warning  'nodes' is not defined                               no-undef
+  31:17  warning  'edges_weight' is not defined                        no-undef
+  31:36  warning  'edges_weight' is not defined                        no-undef
+  31:61  warning  'nodes' is not defined                               no-undef
+  31:82  warning  'nodes' is not defined                               no-undef
+  38:10  warning  'n' is not defined                                   no-undef
+  38:17  warning  'n' is not defined                                   no-undef
+  38:22  warning  'nodes' is not defined                               no-undef
+  38:36  warning  'n' is not defined                                   no-undef
+  39:9   warning  'exist' is not defined                               no-undef
+  41:6   warning  'n' is not defined                                   no-undef
+
+/home/runner/work/exp-gbfs-iiith/exp-gbfs-iiith/experiment/simulation/js/question.js
+   2:5   warning  'isQuestion' is assigned a value but never used  no-unused-vars
+   4:5   warning  'NoQuestion' is assigned a value but never used  no-unused-vars
+   5:5   warning  'chance' is assigned a value but never used      no-unused-vars
+  12:10  warning  'question' is defined but never used             no-unused-vars
+  14:2   warning  'isObservation' is not defined                   no-undef
+  19:10  warning  'submit' is defined but never used               no-unused-vars
+
+✖ 222 problems (0 errors, 222 warnings)
+
